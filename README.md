@@ -39,6 +39,164 @@ div.container > ul > li > a { }
 
 ```
 
+## Use shorthand properties where possible
+Utilize shorthand properties for margin, padding, background, etc., where applicable
+```
+/* Instead of this */
+margin-top: 2rem;
+margin-right: 2rem;
+margin-bottom: 2rem;
+margin-left: 2rem;
+
+/* Use this */
+margin: 2rem;
+
+```
+
+## Consistent Units
+Use relative units (rem, %) over fixed units (px) to allow for better scalability.
+```
+.element{
+    font-size: 1.6rem;
+    padding: 2.4rem 3.2rem
+}
+```
+
+## Use of Hex, RGB, or HSL for Colors
+Prefer using hex codes for colors. For more control (e.g., opacity), use rgba or hsla
+```
+.element{ 
+    color: #ff5733;
+    background-color: rgba(255, 87, 51, 0.5);
+}
+```
+
+## Class Reusability
+Avoid using IDs for styling; rely on class selectors for reusability.
+Keep classes reusable by not coupling them too tightly to a specific element.
+
+## Avoid Overwriting CSS
+Don't use !important unless absolutely necessary, as it makes debugging difficult.
+
+## Use Variables (CSS Custom Properties)
+Use CSS variables to maintain consistency for common values (colors, fonts, spacing)
+```
+:root {
+  --font-size: 1.6rem;
+  --primary-color: #3498db;
+  --secondary-color: #2ecc71;
+}
+
+body {
+  color: var(--primary-color);
+  font-size: var(--font-size);
+}
+```
+
+## Proper spacing between Style Blocks
+Add one blank line between each CSS rule block.
+Keep each style block self-contained, starting with the selector and ending with a closing brace.
+Use consistent indentation for readability (typically 2 or 4 spaces).
+Follow top down approach or arrow approach
+```
+/* Default body styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 1.6rem;
+  font-family: Arial, sans-serif;
+}
+
+/* Container styles */
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Header styles */
+.header {
+  color: #000000;
+  font-size: 2rem;
+  text-align: center;
+}
+
+/* Paragraph styles */
+p {
+  color: #666666;
+  margin: 10px 0;
+  line-height: 1.5;
+}
+```
+
+## Style Approaches
+To maintain consistency and readability in your CSS, it's important to use a uniform "top-down" approach or "arrow approach" for ordering style properties. Mixing these styles within the same codebase can lead to confusion and reduce readability.
+
+### Top-Down Approach
+Properties are listed in logical groupings, starting from general (e.g., layout) to specific (e.g., typography or appearance). This approach reads naturally, following a "broad to narrow" hierarchy.
+```
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 1.6rem;
+  font-family: Arial, sans-serif;
+}
+```
+
+### Arrow Approach
+Properties are ordered based on their visual flow, often prioritizing those that define structure (like display, position, etc.) before moving to alignment and aesthetics. This creates a "step-by-step" flow in styling.
+
+```
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 20px;
+  z-index: 1;
+}
+```
+
+
+## Media Queries
+Write media queries as mobile-first, meaning style for small screens first and then larger
+```
+.element {
+  font-size: 1.4rem;
+}
+
+@media (min-width: 768px) {
+  .element {
+    font-size: 1.6rem;
+  }
+}
+```
+
+## Media Queries(Special Case: Desktop-First Approach)
+In projects where the majority of visitors are desktop users, or when working on an existing site/application already designed for desktop-first, consider adopting a desktop-first approach for your media queries. This ensures better alignment with the client's existing architecture and optimizes the experience for the primary user base.
+
+```
+.element {
+  font-size: 1.6rem;
+}
+
+@media (max-width: 767px) {
+  .element {
+    font-size: 1.4rem;
+  }
+}
+```
+
+## Comments for Clarity
+Comment your code to provide clarity, especially in complex areas
+```
+/* Header styling */
+.header { }
+
+```
+
 ## Avoid Inline Styles
 
 Avoid using inline styles (style=""), and keep all styles in external stylesheets.
