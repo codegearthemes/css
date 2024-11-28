@@ -1,3 +1,6 @@
+# CSS Style Guide
+A comprehensive CSS style guide for maintaining consistency, readability, and scalability in web/application development projects. Ideal for teams and individual developers striving for clean and efficient code.
+
 ## Indentation and Formatting
 
 Use 2 spaces or 4 spaces for indentation (no tabs) for consistency.
