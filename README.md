@@ -96,6 +96,15 @@ body {
 }
 ```
 
+## Consistent units
+To maintain a clean and consistent design system, use units based on multiples of 2 or 4. This approach ensures logical spacing, alignment, and scalability across your project.
+
+Small Units: 2px, 4px, 8px, 12px
+Medium Units: 16px, 20px, 24px // 1.6rem, 2rem, 2.4rem
+Large Units: 32px, 40px, 48px // 3.2rem, 4rem, 4.8rem
+Extra Large Units: 64px, 128px // 6.4rem 12.8rem
+
+
 ## Proper spacing between Style Blocks
 Add one blank line between each CSS rule block.
 Keep each style block self-contained, starting with the selector and ending with a closing brace.
@@ -116,7 +125,7 @@ body {
   align-items: center;
   justify-content: center;
   margin: 0 auto;
-  padding: 20px;
+  padding: 2rem;
 }
 
 /* Header styles */
@@ -129,7 +138,7 @@ body {
 /* Paragraph styles */
 p {
   color: #666666;
-  margin: 10px 0;
+  margin: 1rem 0;
   line-height: 1.5;
 }
 ```
@@ -157,7 +166,7 @@ Properties are ordered based on their visual flow, often prioritizing those that
   align-items: center;
   justify-content: center;
   margin: 0 auto;
-  padding: 20px;
+  padding: 2rem;
   z-index: 1;
 }
 ```
@@ -208,7 +217,8 @@ Inline styles are acceptable when using CSS variables defined in :root for dynam
 ```
 /* Define root variables */
 :root {
-  --border-radius: 4px;
+  --border-radius: 0.4rem;
+
   --button-color: white;
   --button-background: black;
   --button-border-color: black;
