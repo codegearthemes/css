@@ -17,7 +17,7 @@ selector {
 ## Selector Naming Conventions
 Use lowercase for all class and ID names.
 Use hyphens (-) for naming before element.
-Use hyphens (\_\_) for naming before modifier.
+Use hyphens (__) for naming before modifier.
 Use BEM (Block Element Modifier) methodology for large projects
 
 ```
