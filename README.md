@@ -266,6 +266,6 @@ Avoid using complex or unnecessary selectors
 .header ul li a {}
 
 /* Prefer */
-.header__link {}
+.list-menu__item {}
 
 ```
